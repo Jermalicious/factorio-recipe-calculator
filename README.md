@@ -3,7 +3,9 @@ This is a project that automatically finds how many assemblers you need of each 
 The CSV file is optional, as the program can create it on its own, and it will add to the csv file whenever a new item is needed.
 
 Usage: ./recipeCalc "[item_name]" [items/sec] -flags
-                        the quotes are VERY important around item_name
+
+the quotes around item_name are VERY important
+
 
 flags:
 
