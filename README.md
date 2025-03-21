@@ -1,6 +1,5 @@
 # factorio-recipe-calculator
-This is a project that automatically finds how many assemblers you need of each item in a recipe to hit a specified items/sec.
-
+This is a project that automatically finds how many assemblers you need for each ingredient in a recipe to hit a specified items/sec.
 The CSV file is optional, as the program can create it on its own, and it will add to the csv file whenever a new item is needed. However, it includes all the items necessary for the non-space-age science recipes.
 
 Usage: ./recipeCalc "[item_name]" [items/sec] -flags
