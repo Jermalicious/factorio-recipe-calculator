@@ -9,12 +9,12 @@ the quotes around item_name are VERY important.
 
 flags:
 
--s <float>:     crafting speed multiplier to account for different assembler crafting speeds
+-s <float>:     crafting speed multiplier to account for different assembler crafting speeds.
 
--v:             verbose. print out the item csv file in readable format
-                prints out cumulative assemblers when calculating total
+-v:             verbose. print out the item csv file in readable format.
+                prints out cumulative assemblers when calculating total.
 
--i <file.csv>:  input csv file (default is items.csv)
+-i <file.csv>:  input csv file (default is items.csv).
 
 -o <file.csv>:  output csv file (default is items.csv)
 
