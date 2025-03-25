@@ -1,0 +1,38 @@
+name,craftingTime,craftNum,isBasicResource,{ingredient,num;...}
+copper plate,0,0,true,{}
+iron plate,0,0,true,{}
+steel,0,0,true,{}
+sulfur,0,0,true,{}
+plastic,0,0,true,{}
+coal,0,0,true,{}
+stone brick,0,0,true,{}
+lubricant,0,0,true,{}
+sulfuric acid,0,0,true,{}
+stone ore,0,0,true,{}
+green science,6,1,false,{yellow inserter,1;yellow belt,1;}
+yellow inserter,0.5,1,false,{green circuit,1;iron gear,1;iron plate,1;}
+green circuit,0.5,1,false,{copper wire,3;iron plate,1;}
+copper wire,0.5,2,false,{copper plate,1;}
+iron gear,0.5,1,false,{iron plate,2;}
+yellow belt,0.5,2,false,{iron gear,1;iron plate,1;}
+blue science,24,2,false,{red circuit,3;engine,2;sulfur,1;}
+red circuit,6,1,false,{copper wire,4;green circuit,2;plastic,2;}
+engine,10,1,false,{iron gear,1;pipe,2;steel,1;}
+pipe,0.5,1,false,{iron plate,1;}
+red science,5,1,false,{iron gear,1;copper plate,1;}
+black science,10,2,false,{red ammo,1;grenade,1;wall,2;}
+red ammo,3,1,false,{copper plate,5;yellow ammo,1;steel,1;}
+yellow ammo,1,1,false,{iron plate,4;}
+grenade,8,1,false,{coal,10;iron plate,5;}
+wall,0.5,1,false,{stone brick,5;}
+yellow science,21,3,false,{flying robot frame,1;low density structure,3;blue circuit,2;}
+flying robot frame,20,1,false,{battery,2;electric engine,1;green circuit,3;steel,1;}
+battery,4,1,false,{copper plate,1;iron plate,1;sulfuric acid,20;}
+electric engine,10,1,false,{green circuit,2;engine,1;lubricant,15;}
+low density structure,15,1,false,{copper plate,20;plastic,5;steel,2;}
+blue circuit,10,1,false,{red circuit,2;green circuit,20;sulfuric acid,5;}
+purple science,21,3,false,{electric furnace,1;productivity module,1;rail,30;}
+electric furnace,5,1,false,{red circuit,5;steel,10;stone brick,10;}
+productivity module,15,1,false,{red circuit,5;green circuit,5;}
+rail,0.5,2,false,{iron stick,1;steel,1;stone ore,1;}
+iron stick,0.5,2,false,{iron plate,1;}
