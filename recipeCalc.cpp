@@ -268,7 +268,7 @@ int main(int argc, char** argv) {
 	}
 
 	goal_item_name = argv[1];	
-	goal_items_sec = stoi(argv[2]);
+	goal_items_sec = stof(argv[2]);
 
 	// grab info from the csv, input file can be changed with -i flag. exits on error
 	if( readFromCSV(inputFile) ) { return 1; }
