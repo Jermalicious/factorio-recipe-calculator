@@ -1,38 +1,195 @@
 name,craftingTime,craftNum,isBasicResource,{ingredient,num;...}
-copper plate,0,0,true,{}
-iron plate,0,0,true,{}
-steel,0,0,true,{}
-sulfur,0,0,true,{}
-plastic,0,0,true,{}
-coal,0,0,true,{}
-stone brick,0,0,true,{}
-lubricant,0,0,true,{}
-sulfuric acid,0,0,true,{}
-stone ore,0,0,true,{}
-green science,6,1,false,{yellow inserter,1;yellow belt,1;}
-yellow inserter,0.5,1,false,{green circuit,1;iron gear,1;iron plate,1;}
-green circuit,0.5,1,false,{copper wire,3;iron plate,1;}
-copper wire,0.5,2,false,{copper plate,1;}
-iron gear,0.5,1,false,{iron plate,2;}
-yellow belt,0.5,2,false,{iron gear,1;iron plate,1;}
-blue science,24,2,false,{red circuit,3;engine,2;sulfur,1;}
-red circuit,6,1,false,{copper wire,4;green circuit,2;plastic,2;}
-engine,10,1,false,{iron gear,1;pipe,2;steel,1;}
-pipe,0.5,1,false,{iron plate,1;}
-red science,5,1,false,{iron gear,1;copper plate,1;}
-black science,10,2,false,{red ammo,1;grenade,1;wall,2;}
-red ammo,3,1,false,{copper plate,5;yellow ammo,1;steel,1;}
-yellow ammo,1,1,false,{iron plate,4;}
-grenade,8,1,false,{coal,10;iron plate,5;}
-wall,0.5,1,false,{stone brick,5;}
-yellow science,21,3,false,{flying robot frame,1;low density structure,3;blue circuit,2;}
-flying robot frame,20,1,false,{battery,2;electric engine,1;green circuit,3;steel,1;}
-battery,4,1,false,{copper plate,1;iron plate,1;sulfuric acid,20;}
-electric engine,10,1,false,{green circuit,2;engine,1;lubricant,15;}
-low density structure,15,1,false,{copper plate,20;plastic,5;steel,2;}
-blue circuit,10,1,false,{red circuit,2;green circuit,20;sulfuric acid,5;}
-purple science,21,3,false,{electric furnace,1;productivity module,1;rail,30;}
-electric furnace,5,1,false,{red circuit,5;steel,10;stone brick,10;}
-productivity module,15,1,false,{red circuit,5;green circuit,5;}
-rail,0.5,2,false,{iron stick,1;steel,1;stone ore,1;}
-iron stick,0.5,2,false,{iron plate,1;}
+speed-module,15,1,false,{red-circuit:5,green-circuit:5,}
+speed-module-2,30,1,false,{speed-module:4,red-circuit:5,blue-circuit:5,}
+speed-module-3,60,1,false,{speed-module-2:4,red-circuit:5,blue-circuit:5,}
+productivity-module,15,1,false,{red-circuit:5,green-circuit:5,}
+productivity-module-2,30,1,false,{productivity-module:4,red-circuit:5,blue-circuit:5,}
+productivity-module-3,60,1,false,{productivity-module-2:4,red-circuit:5,blue-circuit:5,}
+efficiency-module,15,1,false,{red-circuit:5,green-circuit:5,}
+efficiency-module-2,30,1,false,{efficiency-module:4,red-circuit:5,blue-circuit:5,}
+efficiency-module-3,60,1,false,{efficiency-module-2:4,red-circuit:5,blue-circuit:5,}
+bulk-inserter,0.5,1,false,{iron-gear-wheel:15,green-circuit:15,red-circuit:1,fast-inserter:1,}
+barrel,1,1,false,{steel-plate:1,}
+night-vision-equipment,10,1,false,{red-circuit:5,steel-plate:10,}
+belt-immunity-equipment,10,1,false,{red-circuit:5,steel-plate:10,}
+energy-shield-equipment,10,1,false,{red-circuit:5,steel-plate:10,}
+energy-shield-mk2-equipment,10,1,false,{energy-shield-equipment:10,blue-circuit:5,low-density-structure:5,}
+battery-equipment,10,1,false,{battery:5,steel-plate:10,}
+battery-mk2-equipment,10,1,false,{battery-equipment:10,blue-circuit:15,low-density-structure:5,}
+solar-panel-equipment,10,1,false,{solar-panel:1,red-circuit:2,steel-plate:5,}
+fission-reactor-equipment,10,1,false,{blue-circuit:200,low-density-structure:50,uranium-fuel-cell:4,}
+personal-laser-defense-equipment,10,1,false,{blue-circuit:20,low-density-structure:5,laser-turret:5,}
+discharge-defense-equipment,10,1,false,{blue-circuit:5,steel-plate:20,laser-turret:10,}
+exoskeleton-equipment,10,1,false,{blue-circuit:10,electric-engine-unit:30,steel-plate:20,}
+personal-roboport-equipment,10,1,false,{red-circuit:10,iron-gear-wheel:40,steel-plate:20,battery:45,}
+personal-roboport-mk2-equipment,20,1,false,{personal-roboport-equipment:5,blue-circuit:100,low-density-structure:20,}
+laser-turret,20,1,false,{steel-plate:20,green-circuit:20,battery:12,}
+flamethrower-turret,20,1,false,{steel-plate:30,iron-gear-wheel:15,pipe:10,engine-unit:5,}
+artillery-turret,40,1,false,{steel-plate:60,concrete:60,iron-gear-wheel:40,red-circuit:20,}
+gun-turret,8,1,false,{iron-gear-wheel:10,copper-plate:10,iron-plate:20,}
+wooden-chest,0.5,1,false,{wood:2,}
+display-panel,0.5,1,false,{iron-plate:1,}
+iron-stick,0.5,2,false,{iron-plate:1,}
+stone-furnace,0.5,1,false,{stone:5,}
+boiler,0.5,1,false,{stone-furnace:1,}
+steam-engine,0.5,1,false,{iron-gear-wheel:8,pipe:5,iron-plate:10,}
+iron-gear-wheel,0.5,1,false,{iron-plate:2,}
+green-circuit,0.5,1,false,{iron-plate:1,copper-cable:3,}
+yellow-belt,0.5,2,false,{iron-plate:1,iron-gear-wheel:1,}
+electric-mining-drill,2,1,false,{green-circuit:3,iron-gear-wheel:5,iron-plate:10,}
+burner-mining-drill,2,1,false,{iron-gear-wheel:3,stone-furnace:1,iron-plate:3,}
+inserter,0.5,1,false,{green-circuit:1,iron-gear-wheel:1,iron-plate:1,}
+fast-inserter,0.5,1,false,{green-circuit:2,iron-plate:2,inserter:1,}
+long-inserter,0.5,1,false,{iron-gear-wheel:1,iron-plate:1,inserter:1,}
+burner-inserter,0.5,1,false,{iron-plate:1,iron-gear-wheel:1,}
+pipe,0.5,1,false,{iron-plate:1,}
+offshore-pump,0.5,1,false,{pipe:3,iron-gear-wheel:2,}
+copper-cable,0.5,2,false,{copper-plate:1,}
+small-electric-pole,0.5,2,false,{wood:1,copper-cable:2,}
+pistol,5,1,false,{copper-plate:5,iron-plate:5,}
+submachine-gun,10,1,false,{iron-gear-wheel:10,copper-plate:5,iron-plate:10,}
+firearm-magazine,1,1,false,{iron-plate:4,}
+light-armor,3,1,false,{iron-plate:40,}
+radar,0.5,1,false,{green-circuit:5,iron-gear-wheel:5,iron-plate:10,}
+small-lamp,0.5,1,false,{green-circuit:1,copper-cable:3,iron-plate:1,}
+pipe-to-ground,0.5,2,false,{pipe:10,iron-plate:5,}
+assembler-1,0.5,1,false,{green-circuit:3,iron-gear-wheel:5,iron-plate:9,}
+repair-pack,0.5,1,false,{green-circuit:2,iron-gear-wheel:2,}
+red-science,5,1,false,{copper-plate:1,iron-gear-wheel:1,}
+green-science,6,1,false,{inserter:1,yellow-belt:1,}
+lab,2,1,false,{green-circuit:10,iron-gear-wheel:10,yellow-belt:4,}
+stone-wall,0.5,1,false,{stone-brick:5,}
+assembler-2,0.5,1,false,{steel-plate:2,green-circuit:3,iron-gear-wheel:5,assembler-1:1,}
+splitter,1,1,false,{green-circuit:5,iron-plate:5,yellow-belt:4,}
+underground-belt,1,2,false,{iron-plate:10,yellow-belt:5,}
+loader,1,1,false,{inserter:5,green-circuit:5,iron-gear-wheel:5,iron-plate:5,yellow-belt:5,}
+car,2,1,false,{engine-unit:8,iron-plate:20,steel-plate:5,}
+engine-unit,10,1,false,{steel-plate:1,iron-gear-wheel:1,pipe:2,}
+iron-chest,0.5,1,false,{iron-plate:8,}
+big-electric-pole,0.5,1,false,{iron-stick:8,steel-plate:5,copper-cable:4,}
+medium-electric-pole,0.5,1,false,{iron-stick:4,steel-plate:2,copper-cable:2,}
+shotgun,10,1,false,{iron-plate:15,iron-gear-wheel:5,copper-plate:10,wood:5,}
+shotgun-shell,3,1,false,{copper-plate:2,iron-plate:2,}
+piercing-rounds-magazine,3,1,false,{firearm-magazine:1,steel-plate:1,copper-plate:5,}
+grenade,8,1,false,{iron-plate:5,coal:10,}
+steel-furnace,3,1,false,{steel-plate:6,}
+gate,0.5,1,false,{stone-wall:1,}
+heavy-armor,8,1,false,{copper-plate:100,}
+steel-chest,0.5,1,false,{steel-plate:8,}
+red-underground-belt,2,2,false,{iron-gear-wheel:40,underground-belt:2,}
+red-splitter,2,1,false,{splitter:1,iron-gear-wheel:10,green-circuit:10,}
+concrete,10,10,false,{stone-brick:5,iron-ore:1,}
+hazard-concrete,0.25,10,false,{concrete:10,}
+refined-concrete,15,10,false,{concrete:20,iron-stick:8,steel-plate:1,}
+refined-hazard-concrete,0.25,10,false,{refined-concrete:10,}
+landfill,0.5,1,false,{stone:50,}
+red-belt,0.5,1,false,{iron-gear-wheel:5,yellow-belt:1,}
+solar-panel,10,1,false,{steel-plate:5,green-circuit:15,copper-plate:5,}
+rail,0.5,2,false,{stone:1,iron-stick:1,steel-plate:1,}
+locomotive,4,1,false,{engine-unit:20,green-circuit:10,steel-plate:30,}
+cargo-wagon,1,1,false,{iron-gear-wheel:10,iron-plate:20,steel-plate:20,}
+rail-signal,0.5,1,false,{green-circuit:1,iron-plate:5,}
+rail-chain-signal,0.5,1,false,{green-circuit:1,iron-plate:5,}
+train-stop,0.5,1,false,{green-circuit:5,iron-plate:6,iron-stick:6,steel-plate:3,}
+steel-plate,16,1,false,{iron-plate:5,}
+arithmetic-combinator,0.5,1,false,{copper-cable:5,green-circuit:5,}
+decider-combinator,0.5,1,false,{copper-cable:5,green-circuit:5,}
+constant-combinator,0.5,1,false,{copper-cable:5,green-circuit:2,}
+selector-combinator,0.5,1,false,{red-circuit:2,decider-combinator:5,}
+power-switch,2,1,false,{iron-plate:5,copper-cable:5,green-circuit:2,}
+programmable-speaker,2,1,false,{iron-plate:3,iron-stick:4,copper-cable:5,green-circuit:4,}
+poison-capsule,8,1,false,{steel-plate:3,green-circuit:3,coal:10,}
+slowdown-capsule,8,1,false,{steel-plate:2,green-circuit:2,coal:5,}
+cluster-grenade,8,1,false,{grenade:7,explosives:5,steel-plate:5,}
+defender-capsule,8,1,false,{piercing-rounds-magazine:3,green-circuit:3,iron-gear-wheel:3,}
+distractor-capsule,15,1,false,{defender-capsule:4,red-circuit:3,}
+destroyer-capsule,15,1,false,{distractor-capsule:4,speed-module:1,}
+cliff-explosives,8,1,false,{explosives:10,grenade:1,barrel:1,}
+uranium-rounds-magazine,10,1,false,{piercing-rounds-magazine:1,uranium-238:1,}
+rocket,4,1,false,{explosives:1,iron-plate:2,}
+explosive-rocket,8,1,false,{rocket:1,explosives:2,}
+atomic-bomb,50,1,false,{blue-circuit:10,explosives:10,uranium-235:30,}
+piercing-shotgun-shell,8,1,false,{shotgun-shell:2,copper-plate:5,steel-plate:2,}
+cannon-shell,8,1,false,{steel-plate:2,plastic-bar:2,explosives:1,}
+explosive-cannon-shell,8,1,false,{steel-plate:2,plastic-bar:2,explosives:2,}
+uranium-cannon-shell,12,1,false,{cannon-shell:1,uranium-238:1,}
+explosive-uranium-cannon-shell,12,1,false,{explosive-cannon-shell:1,uranium-238:1,}
+artillery-shell,15,1,false,{explosive-cannon-shell:4,radar:1,explosives:8,}
+flamethrower-ammo,6,1,false,{steel-plate:5,}
+blue-belt,0.5,1,false,{iron-gear-wheel:10,red-belt:1,}
+assembler-3,0.5,1,false,{speed-module:4,assembler-2:2,}
+tank,5,1,false,{engine-unit:32,steel-plate:50,iron-gear-wheel:15,red-circuit:10,}
+spidertron,10,1,false,{exoskeleton-equipment:4,fission-reactor-equipment:2,rocket-launcher:4,blue-circuit:16,low-density-structure:150,radar:2,efficiency-module-3:2,raw-fish:1,}
+fluid-wagon,1.5,1,false,{iron-gear-wheel:10,steel-plate:16,pipe:8,storage-tank:1,}
+artillery-wagon,4,1,false,{engine-unit:64,iron-gear-wheel:10,steel-plate:40,pipe:16,red-circuit:20,}
+modular-armor,15,1,false,{red-circuit:30,steel-plate:50,}
+power-armor,20,1,false,{blue-circuit:40,}
+power-armor-mk2,25,1,false,{efficiency-module-2:25,speed-module-2:25,blue-circuit:60,electric-engine-unit:40,low-density-structure:30,}
+flamethrower,10,1,false,{steel-plate:5,iron-gear-wheel:10,}
+land-mine,5,4,false,{steel-plate:1,explosives:2,}
+rocket-launcher,10,1,false,{iron-plate:5,iron-gear-wheel:5,green-circuit:5,}
+combat-shotgun,10,1,false,{steel-plate:15,iron-gear-wheel:5,copper-plate:10,wood:10,}
+blue-science,24,2,false,{engine-unit:2,red-circuit:3,sulfur:1,}
+black-science,10,2,false,{piercing-rounds-magazine:1,grenade:1,stone-wall:2,}
+purple-science,21,3,false,{electric-furnace:1,productivity-module:1,rail:30,}
+yellow-science,21,3,false,{low-density-structure:3,blue-circuit:2,flying-robot-frame:1,}
+blue-underground-belt,2,2,false,{iron-gear-wheel:80,red-underground-belt:2,}
+fast-loader,3,1,false,{red-belt:5,loader:1,}
+express-loader,10,1,false,{express-yellow-belt:5,fast-loader:1,}
+blue-splitter,2,1,false,{red-splitter:1,iron-gear-wheel:10,red-circuit:10,}
+red-circuit,6,1,false,{green-circuit:2,plastic-bar:2,copper-cable:4,}
+blue-circuit,10,1,false,{green-circuit:20,red-circuit:2,}
+logistic-robot,0.5,1,false,{flying-robot-frame:1,red-circuit:2,}
+construction-robot,0.5,1,false,{flying-robot-frame:1,green-circuit:2,}
+passive-provider-chest,0.5,1,false,{steel-chest:1,green-circuit:3,red-circuit:1,}
+active-provider-chest,0.5,1,false,{steel-chest:1,green-circuit:3,red-circuit:1,}
+storage-chest,0.5,1,false,{steel-chest:1,green-circuit:3,red-circuit:1,}
+buffer-chest,0.5,1,false,{steel-chest:1,green-circuit:3,red-circuit:1,}
+requester-chest,0.5,1,false,{steel-chest:1,green-circuit:3,red-circuit:1,}
+rocket-silo,30,1,false,{steel-plate:1000,concrete:1000,pipe:100,blue-circuit:200,electric-engine-unit:200,}
+cargo-landing-pad,30,1,false,{concrete:200,steel-plate:25,blue-circuit:10,}
+roboport,5,1,false,{steel-plate:45,iron-gear-wheel:45,red-circuit:45,}
+substation,0.5,1,false,{steel-plate:10,red-circuit:5,copper-cable:6,}
+accumulator,10,1,false,{iron-plate:2,battery:5,}
+electric-furnace,5,1,false,{steel-plate:10,}
+beacon,15,1,false,{green-circuit:20,red-circuit:20,steel-plate:10,copper-cable:10,}
+pumpjack,5,1,false,{steel-plate:5,iron-gear-wheel:10,green-circuit:5,pipe:10,}
+oil-refinery,8,1,false,{steel-plate:15,iron-gear-wheel:10,stone-brick:10,green-circuit:10,pipe:10,}
+electric-engine-unit,10,1,false,{engine-unit:1,green-circuit:2,}
+flying-robot-frame,20,1,false,{electric-engine-unit:1,battery:2,steel-plate:1,green-circuit:3,}
+explosives,4,2,false,{sulfur:1,coal:1,}
+battery,4,1,false,{iron-plate:1,copper-plate:1,}
+storage-tank,3,1,false,{iron-plate:20,steel-plate:5,}
+pump,2,1,false,{engine-unit:1,steel-plate:1,pipe:1,}
+chemical-plant,5,1,false,{steel-plate:5,iron-gear-wheel:5,green-circuit:5,pipe:5,}
+low-density-structure,15,1,false,{steel-plate:2,copper-plate:20,plastic-bar:5,}
+rocket-fuel,15,1,false,{solid-fuel:10,}
+rocket-part,3,1,false,{blue-circuit:10,low-density-structure:10,rocket-fuel:10,}
+satellite,5,1,false,{low-density-structure:100,solar-panel:100,accumulator:100,radar:5,blue-circuit:100,rocket-fuel:50,}
+nuclear-reactor,8,1,false,{concrete:500,steel-plate:500,red-circuit:500,copper-plate:500,}
+centrifuge,4,1,false,{concrete:100,steel-plate:50,red-circuit:100,iron-gear-wheel:100,}
+uranium-fuel-cell,10,10,false,{iron-plate:10,uranium-235:1,uranium-238:19,}
+heat-exchanger,3,1,false,{steel-plate:10,}
+heat-pipe,1,1,false,{steel-plate:10,}
+steam-turbine,3,1,false,{iron-gear-wheel:50,}
+water,0.5,0,true,{}
+steam,0.5,0,true,{}
+crude-oil,0.5,0,true,{}
+heavy-oil,0.5,0,true,{}
+light-oil,0.5,0,true,{}
+lubricant,0.5,0,true,{}
+petroleum-gas,0.5,0,true,{}
+sulfuric-acid,0.5,0,true,{}
+wood,0.5,0,true,{}
+coal,0.5,0,true,{}
+stone,0.5,0,true,{}
+iron-ore,0.5,0,true,{}
+copper,0.5,0,true,{}
+uranium-ore,0.5,0,true,{}
+raw-fish,0.5,0,true,{}
+iron-plate,0.5,0,true,{}
+copper-plate,0.5,0,true,{}
+steel-plate,0.5,0,true,{}
+solid-fuel,0.5,0,true,{}
+plastic-bar,0.5,0,true,{}
+sulfur,0.5,0,true,{}

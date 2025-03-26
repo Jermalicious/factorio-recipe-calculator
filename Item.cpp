@@ -27,7 +27,7 @@ string Item::getPrintableRecipe() {
 	
 	sout << "{";
 	for(int i=0; i < ingredientNames.size(); i++) {
-		sout << ingredientNames.at(i)  << "," << ingredientNums.at(i) << ";";
+		sout << ingredientNames.at(i)  << ":" << ingredientNums.at(i) << ",";
 	}
 	sout << "}";
 

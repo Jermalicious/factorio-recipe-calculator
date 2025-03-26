@@ -176,11 +176,11 @@ int readFromCSV(string inputFile) { // returns 1 if an error, 0 if not
 		
 		getline(sin, line, '{'); // trash the bracket
 		while(true) { // go until the end bracket
-			getline(sin, ingredientName, ',');
+			getline(sin, ingredientName, ':');
 
 			if("}" == ingredientName) break; //if there is not a ingredient, and instead a bracket. we're done
 
-			getline(sin, ingredientNumStr, ';');
+			getline(sin, ingredientNumStr, ',');
 
 			items.at(items.size() - 1).addIngredient(ingredientName, stoi(ingredientNumStr));
 		}
