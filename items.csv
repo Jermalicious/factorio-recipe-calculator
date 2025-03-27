@@ -193,3 +193,11 @@ steel-plate,0.5,0,true,{}
 solid-fuel,0.5,0,true,{}
 plastic-bar,0.5,0,true,{}
 sulfur,0.5,0,true,{}
+uranium-235,0,0,true,{}
+uranium-238,0,0,true,{}
+gregory,60,2,false,{spidertron:5,artillery:10,blue-circuit:50,copper-cable:1,love:-1,love:2,flamethrower:2,copy-of-factorio:10,raw-salmon:1,lubricant:10,}
+artillery,0,1,false,{artillery-turret:1,}
+stone-brick,0,0,true,{}
+love,1,100,false,{uranium-cannon-shell:3,}
+copy-of-factorio,0,0,true,{}
+raw-salmon,5,1,false,{raw-fish:10,piercing-rounds-magazine:1,yellow-science:1,heavy-oil:7,}
