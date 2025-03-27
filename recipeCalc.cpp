@@ -1,4 +1,4 @@
-#include <iostream>
+include <iostream>
 #include <iomanip>
 #include <fstream>
 #include <vector>
@@ -212,7 +212,16 @@ int main(int argc, char** argv) {
 	float goal_items_sec;
 	bool verbose = false;
 
-	if(2 == argc && *"-h" == *argv[1]) {
+	if( 1 == argc ) { //case where it was just double clicked
+		cout << "NOTE: it may be easier to use from the terminal. Run recipe.exe -h for more info" << endl;
+		
+		cout << "Item Name: ";
+		getline(cin, goal_item_name);
+		
+		cout << "Items/Sec ";
+		cin >> goal_items_sec; 
+	}
+	else if(2 == argc && *"-h" == *argv[1]) {
 		cout << "Usage: ./recipeCalc \"[item_name]\" [items/sec] -flags" << endl;
 		cout << "			the quotes are VERY important around item_name" << endl;
 		cout << "-s <float>:	crafting speed multiplier" << endl;
@@ -225,50 +234,51 @@ int main(int argc, char** argv) {
 		return 0;
 	}
 
-	if(argc < 3) {
+	else if(argc < 3) {
 		cerr << "Usage: ./recipeCalc \"[item_name]\" [items/sec] -flags" << endl;
 		cerr << "			the quotes are VERY important around item_name" << endl;
 		return 1;
 	}
-	
-	//parse -flags
-	for(int i=3; i < argc; i++) {
-		char flag;
-		if(argv[i][0] == '-') { flag = argv[i][1]; }
+	else {
+		//parse -flags
+		for(int i=3; i < argc; i++) {
+			char flag;
+			if(argv[i][0] == '-') { flag = argv[i][1]; }
 
-		switch(flag) {
-			case 'i':
-				inputFile = argv[i+1];
-				if("items.csv" == outputFile) { outputFile = argv[i+1]; }
-				i++; //to skip the filename next iteration;
-				break;
-			case 'o':
-				outputFile = argv[i+1];
-				i++; //to skip the filename next iteration;
-				break;
-			case 'v':
-				verbose = true;
-				break;
-			case 's':
-				craftingSpeedMultiplier = stof(argv[i+1]);
-				i++;
-				break;
-			case 'h':
-				cout << "Usage: ./recipeCalc \"[item_name]\" [items/sec] -flags" << endl;
-				cout << "			the quotes are VERY important around item_name" << endl;
-				cout << "-s <float>:	crafting speed multiplier" << endl;
-				cout << "-v:		verbose. print out the item csv file in readable format" << endl;
-				cout << "		        prints out cumulative assemblers when calculating total" << endl;
-				cout << "-i <file.csv>:	input csv file (default is items.csv)" << endl;
-				cout << "-o <file.csv>:	output csv file (default is items.csv)" << endl;
-				cout << "-h:	help" << endl;
-				cout << endl;
-				return 0;
+			switch(flag) {
+				case 'i':
+					inputFile = argv[i+1];
+					if("items.csv" == outputFile) { outputFile = argv[i+1]; }
+					i++; //to skip the filename next iteration;
+					break;
+				case 'o':
+					outputFile = argv[i+1];
+					i++; //to skip the filename next iteration;
+					break;
+				case 'v':
+					verbose = true;
+					break;
+				case 's':
+					craftingSpeedMultiplier = stof(argv[i+1]);
+					i++;
+					break;
+				case 'h':
+					cout << "Usage: ./recipeCalc \"[item_name]\" [items/sec] -flags" << endl;
+					cout << "			the quotes are VERY important around item_name" << endl;
+					cout << "-s <float>:	crafting speed multiplier" << endl;
+					cout << "-v:		verbose. print out the item csv file in readable format" << endl;
+					cout << "		        prints out cumulative assemblers when calculating total" << endl;
+					cout << "-i <file.csv>:	input csv file (default is items.csv)" << endl;
+					cout << "-o <file.csv>:	output csv file (default is items.csv)" << endl;
+					cout << "-h:	help" << endl;
+					cout << endl;
+					return 0;
+			}
 		}
-	}
 
-	goal_item_name = argv[1];	
-	goal_items_sec = stof(argv[2]);
+		goal_item_name = argv[1];	
+		goal_items_sec = stof(argv[2]);
+	}
 
 	// grab info from the csv, input file can be changed with -i flag. exits on error
 	if( readFromCSV(inputFile) ) { return 1; }
@@ -320,4 +330,11 @@ int main(int argc, char** argv) {
 
 
 	cout << endl;
+	// pause the program if it was not run from the terminal
+	if(1 == argc) {
+		cout << endl;
+		cout << "Press [Enter] to close" << endl;
+		cin.get();
+		cin.get();
+	}
 }
